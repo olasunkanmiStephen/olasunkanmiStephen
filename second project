@@ -1,0 +1,250 @@
+Public Class Form1
+    Dim US_Dollar As Double = 410
+    Dim British_Pound As Double = 565
+    Dim Euro As Double = 485
+    Dim Kenyan_Shilling As Double = 4
+    Dim Canadian_Dollar As Double = 330
+    Dim Australian_Dollar As Double = 300
+    Dim Japanese_Yan As Double = 3.7
+    Dim Chinese_Yuan As Double = 63
+    Dim Indian_Rupee As Double = 5.5
+    Dim South_Africa_Rand As Double = 3.7
+    Dim Brazilian_Real As Double = 75
+    Dim Russian_Ruble As Double = 5.6
+    Dim Saudi_Arabian_Riyal As Double = 109
+    Dim United_Arab_Emirates_Dirham As Double = 112
+    Dim Mexico_Peso As Double = 20
+    Dim Singapore_Dollar As Double = 303
+    Dim Swiss_France As Double = 446
+    Dim Swedish_Krona As Double = 47
+    Dim Norwegian_Krone As Double = 48
+    Dim New_Zealand_Dollar As Double = 290
+    Dim South_Korean_Won As Double = 0.35
+    Dim Indonesian_Rupiah As Double = 0.028
+    Dim Turkish_Lira As Double = 47
+    Dim Thai_Baht As Double = 13
+    Dim Malaysian_Ringgit As Double = 98
+    Dim Eygptian_Pound As Double = 47
+    Dim Ghanian_Cedi As Double = 71
+    Dim Philippin_Peso As Double = 8.2
+    Dim Pakistani_Rupee As Double = 2.5
+    Dim Argentine_Peso As Double = 4.3
+    Dim Colombian_Peso As Double = 0.11
+    Dim Chilean_Peso As Double = 0.5
+    Dim Venezuelan_Bolivar As Double = 0.05
+    Dim Iranian_Rial As Double = 0.0098
+    Dim Iraqi_Dinar As Double = 0.28
+
+    Function CuConverter(ByVal money As Double) As Double
+
+        If cmbCurrency.Text = "USD" Then
+            Return Math.Round(US_Dollar * money, 2)
+        ElseIf cmbCurrency.Text = "GBP" Then
+            Return Math.Round(British_Pound * money, 2)
+        ElseIf cmbCurrency.Text = "EUR" Then
+            Return Math.Round(Euro * money, 2)
+        ElseIf cmbCurrency.Text = "" Then
+            Return Math.Round(Kenyan_Shilling * money, 2)
+        ElseIf cmbCurrency.Text = "CAD" Then
+            Return Math.Round(Canadian_Dollar * money, 2)
+        ElseIf cmbCurrency.Text = "AUD" Then
+            Return Math.Round(Australian_Dollar * money, 2)
+        ElseIf cmbCurrency.Text = "JPY" Then
+            Return Math.Round(Japanese_Yan * money, 2)
+        ElseIf cmbCurrency.Text = "CNY" Then
+            Return Math.Round(Chinese_Yuan * money, 2)
+        ElseIf cmbCurrency.Text = "INR" Then
+            Return Math.Round(Indian_Rupee * money, 2)
+        ElseIf cmbCurrency.Text = "ZAR" Then
+            Return Math.Round(South_Africa_Rand * money, 2)
+        ElseIf cmbCurrency.Text = "BRL" Then
+            Return Math.Round(Brazilian_Real * money, 2)
+        ElseIf cmbCurrency.Text = "RUB" Then
+            Return Math.Round(Russian_Ruble * money, 2)
+        ElseIf cmbCurrency.Text = "SAR" Then
+            Return Math.Round(Saudi_Arabian_Riyal * money, 2)
+        ElseIf cmbCurrency.Text = "aed" Then
+            Return Math.Round(United_Arab_Emirates_Dirham * money, 2)
+        ElseIf cmbCurrency.Text = "MXN" Then
+            Return Math.Round(Mexico_Peso * money, 2)
+        ElseIf cmbCurrency.Text = "SGD" Then
+            Return Math.Round(Singapore_Dollar * money, 2)
+        ElseIf cmbCurrency.Text = "CHF" Then
+            Return Math.Round(Swiss_France * money, 2)
+        ElseIf cmbCurrency.Text = "SEK" Then
+            Return Math.Round(Swedish_Krona * money, 2)
+        ElseIf cmbCurrency.Text = "NOK" Then
+            Return Math.Round(Norwegian_Krone * money, 2)
+        ElseIf cmbCurrency.Text = "TRY" Then
+            Return Math.Round(Turkish_Lira * money, 2)
+        ElseIf cmbCurrency.Text = "NZD" Then
+            Return Math.Round(New_Zealand_Dollar * money, 2)
+        ElseIf cmbCurrency.Text = "KRW" Then
+            Return Math.Round(South_Korean_Won * money, 2)
+        ElseIf cmbCurrency.Text = "IDR" Then
+            Return Math.Round(Indonesian_Rupiah * money, 2)
+        ElseIf cmbCurrency.Text = "THB" Then
+            Return Math.Round(Thai_Baht * money, 2)
+        ElseIf cmbCurrency.Text = "MYR" Then
+            Return Math.Round(Malaysian_Ringgit * money, 2)
+        ElseIf cmbCurrency.Text = "EGP" Then
+            Return Math.Round(Eygptian_Pound * money, 2)
+        ElseIf cmbCurrency.Text = "GHS" Then
+            Return Math.Round(Ghanian_Cedi * money, 2)
+        ElseIf cmbCurrency.Text = "PKR" Then
+            Return Math.Round(Philippin_Peso * money, 2)
+        ElseIf cmbCurrency.Text = "PHP" Then
+            Return Math.Round(Pakistani_Rupee * money, 2)
+        ElseIf cmbCurrency.Text = "ARS" Then
+            Return Math.Round(Argentine_Peso * money, 2)
+        ElseIf cmbCurrency.Text = "COP" Then
+            Return Math.Round(Colombian_Peso * money, 2)
+        ElseIf cmbCurrency.Text = "CLP" Then
+            Return Math.Round(Chilean_Peso * money, 2)
+        ElseIf cmbCurrency.Text = "VES" Then
+            Return Math.Round(Venezuelan_Bolivar * money, 2)
+        ElseIf cmbCurrency.Text = "IRR" Then
+            Return Math.Round(Iranian_Rial * money, 2)
+        ElseIf cmbCurrency.Text = "IQD" Then
+            Return Math.Round(Iraqi_Dinar * money, 2)
+        End If
+    End Function
+
+
+    Private Sub btnClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClose.Click
+        btnCC.Visible = True
+        lblConvert.Text = ""
+        txtConvert.Text = ""
+        cmbCurrency.Text = "Choose One"
+    End Sub
+
+    Private Sub btnCC_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCC.Click
+        btnCC.Visible = False
+    End Sub
+
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        cmbCurrency.Text = "Choose One..."
+        cmbCurrency.Items.Add("USA")
+        cmbCurrency.Items.Add("GBP")
+        cmbCurrency.Items.Add("EUR")
+        cmbCurrency.Items.Add("CAD")
+        cmbCurrency.Items.Add("AUD")
+        cmbCurrency.Items.Add("JPY")
+        cmbCurrency.Items.Add("CNY")
+        cmbCurrency.Items.Add("INR")
+        cmbCurrency.Items.Add("ZAR")
+        cmbCurrency.Items.Add("BRL")
+        cmbCurrency.Items.Add("RUB")
+        cmbCurrency.Items.Add("SAR")
+        cmbCurrency.Items.Add("AED")
+        cmbCurrency.Items.Add("MXN")
+        cmbCurrency.Items.Add("SGD")
+        cmbCurrency.Items.Add("CHF")
+        cmbCurrency.Items.Add("SEK")
+        cmbCurrency.Items.Add("NOK")
+        cmbCurrency.Items.Add("NZD")
+        cmbCurrency.Items.Add("KRW")
+        cmbCurrency.Items.Add("IDR")
+        cmbCurrency.Items.Add("TRY")
+        cmbCurrency.Items.Add("THB")
+        cmbCurrency.Items.Add("MYR")
+        cmbCurrency.Items.Add("EGP")
+        cmbCurrency.Items.Add("KES")
+        cmbCurrency.Items.Add("GHS")
+        cmbCurrency.Items.Add("PKR")
+        cmbCurrency.Items.Add("PHP")
+        cmbCurrency.Items.Add("ARS")
+        cmbCurrency.Items.Add("COP")
+        cmbCurrency.Items.Add("CLP")
+        cmbCurrency.Items.Add("VES")
+        cmbCurrency.Items.Add("IRR")
+        cmbCurrency.Items.Add("IQD")
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+
+        Dim Nigerian_Naira As Double = CDbl(txtConvert.Text)
+        lblConvert.Text = CStr(CuConverter(Nigerian_Naira))
+
+        If cmbCurrency.Text = "USD" Then
+            lblConvert.Text = "NGN" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "GBP" Then
+            lblConvert.Text = "GBP" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "EUR" Then
+            lblConvert.Text = "EUR" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "CAD" Then
+            lblConvert.Text = "CAD" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "AUD" Then
+            lblConvert.Text = "AUD" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "JPY" Then
+            lblConvert.Text = "JPY" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "CNY" Then
+            lblConvert.Text = "CNY" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "INR" Then
+            lblConvert.Text = "INR" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "ZAR" Then
+            lblConvert.Text = "ZAR" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "BRL" Then
+            lblConvert.Text = "BRL" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "RUB" Then
+            lblConvert.Text = "RUB" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "SAR" Then
+            lblConvert.Text = "SAR" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "AED" Then
+            lblConvert.Text = "AED" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "MXN" Then
+            lblConvert.Text = "MXN" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "SGD" Then
+            lblConvert.Text = "SGD" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "CHF" Then
+            lblConvert.Text = "CHF" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "SEK" Then
+            lblConvert.Text = "SEK" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "NOK" Then
+            lblConvert.Text = "NOK" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "NZD" Then
+            lblConvert.Text = "NZD" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "KRW" Then
+            lblConvert.Text = "KRW" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "IDR" Then
+            lblConvert.Text = "IDR" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "TRY" Then
+            lblConvert.Text = "TRY" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "THB" Then
+            lblConvert.Text = "THB" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "MYR" Then
+            lblConvert.Text = "MYR" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "EGP" Then
+            lblConvert.Text = "EGP" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "KES" Then
+            lblConvert.Text = "KES" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "GHS" Then
+            lblConvert.Text = "GHS" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "PKR" Then
+            lblConvert.Text = "PKR" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "PHP" Then
+            lblConvert.Text = "PHP" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "ARS" Then
+            lblConvert.Text = "ARS" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "COP" Then
+            lblConvert.Text = "COP" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "CLP" Then
+            lblConvert.Text = "CLP" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "VES" Then
+            lblConvert.Text = "VES" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "IRR" Then
+            lblConvert.Text = "IRR" & "" & Val(lblConvert.Text)
+        ElseIf cmbCurrency.Text = "IQD" Then
+            lblConvert.Text = "IQD" & "" & Val(lblConvert.Text)
+        End If
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        'reset
+        lblConvert.Text = ""
+        txtConvert.Text = ""
+        cmbCurrency.Text = "Choose One"
+    End Sub
+End Class
